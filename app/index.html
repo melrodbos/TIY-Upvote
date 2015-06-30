@@ -21,23 +21,40 @@
   <!-- endbuild -->
 </head>
 
-<body>
+<body ng-controller="MainController as app">
   <div class="container-fluid">
-    <div class="header">
+    <nav class="header">
       <ul class="nav nav-pills pull-right">
         <li class="active">
-          <button><a href="#">{{Questions}}</a></button>
-        </li>
+          <li><button><a href="#" ng-click="#" class="btn btn-default">Questions</a></button></li>
+          <li><button><a href="#" ng-click="#" class="btn btn-default">Tags</a></button></li>
+          <li><button><a href="#" ng-click="#" class="btn btn-default">Badges</a></button></li>
+          <li><button><a href="#" ng-click="#" class="btn btn-default">Unanswered</a></button></li>
+          <li><button><a href="#" ng-click="#" class="btn btn-default">Ask Question</a></button></li>
       </ul>
-      <h3 class="text-muted">TIY-Upvote</h3>
-    </div>
+      <h1 class="text-muted"><strong><big>TIY-Upvote</big></strong></h1>
+    </nav>
 
 
     <div class="row questions">
-      <div class="col-lg-6">
+      <div class="col-lg-8">
+<nav class=header>
+  <ul class="nav nav-pills pull-right">
+    <li class="active">
+      <li><button><a href="#" ng-click="#" class="btn btn-default">Questions</a></button></li>
+      <li><button><a href="#" ng-click="#" class="btn btn-default">Ask Question</a></button></li>
+  </ul>
+</nav>
       </div>
     </div>
 
+    <aside class="row sidebar">
+      <div class="col-md-2">
+<h3>Work From anywhere</h3>
+      </div>
+    </aside>
+
+</div>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
