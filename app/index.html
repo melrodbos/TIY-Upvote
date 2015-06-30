@@ -27,9 +27,6 @@
       <ul class="nav nav-pills pull-right">
         <li class="active">
           <li><button><a href="#" ng-click="#" class="btn btn-default">Questions</a></button></li>
-          <li><button><a href="#" ng-click="#" class="btn btn-default">Tags</a></button></li>
-          <li><button><a href="#" ng-click="#" class="btn btn-default">Badges</a></button></li>
-          <li><button><a href="#" ng-click="#" class="btn btn-default">Unanswered</a></button></li>
           <li><button><a href="#" ng-click="#" class="btn btn-default">Ask Question</a></button></li>
       </ul>
       <h1 class="text-muted"><strong><big>TIY-Upvote</big></strong></h1>
@@ -38,17 +35,25 @@
 
     <div class="row questions">
       <div class="col-lg-8">
-<nav class=header>
+<nav class="tab-row">
   <ul class="nav nav-pills pull-right">
     <li class="active">
-      <li><button><a href="#" ng-click="#" class="btn btn-default">Questions</a></button></li>
-      <li><button><a href="#" ng-click="#" class="btn btn-default">Ask Question</a></button></li>
+      <li class="tab-current"><button><a href="#" ng-click="#" class="btn btn-default">interesting</a></button></li>
+      <li><button>{{#}}</button><button><a href="#" ng-click="#" class="btn btn-default">featured</a></button></li>
+      <li><button><a href="#" ng-click="#" class="btn btn-default">hot</a></button></li>
+      <li><button><a href="#" ng-click="#" class="btn btn-default">week</a></button></li>
+      <li><button><a href="#" ng-click="#" class="btn btn-default">month</a></button></li>
   </ul>
 </nav>
+<section class="content-current">
+  <div class="singlepanel">
+
+  </div>
+</section>
       </div>
     </div>
 
-    <aside class="row sidebar">
+    <aside class="row sidebar pull-right">
       <div class="col-md-2">
 <h3>Work From anywhere</h3>
       </div>
