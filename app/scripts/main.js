@@ -22,7 +22,7 @@
     $routeProvider.otherwise('/questions');
   });
 
-  myUpvote.controller('')
+
 
 
 
