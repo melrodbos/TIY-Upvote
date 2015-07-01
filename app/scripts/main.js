@@ -1,4 +1,5 @@
 (function() {
+  'use strict';
 
 
   var app = angular.module('tiy-upvote', ['ngRoute', 'restangular' ]);
@@ -21,6 +22,8 @@
     });
     $routeProvider.otherwise('/questions');
   });
+
+  app.controller('QuestionsController')
 
 // in case a MainController is needed
 /*
