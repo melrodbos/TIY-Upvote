@@ -1,32 +1,26 @@
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ask a Question</title>
-</head>
-
-  <div class="container-fluid" ng-controller="QuestionsController as questions">
+  <main class="container-fluid" ng-controller="QuestionsController as questions">
     <div class="row questions">
       <div class="col-lg-12">
         <nav class="tab-row">
           <ul class="nav">
             <li class="active">
               <li class="tab-current">
-                <button><a href="#" ng-click="#" class="btn btn-default">interesting</a></button>
+                <button><a href="#"  class="btn btn-default">interesting</a></button>
               </li>
               <li>
                 <button>
-                  <a href="#" ng-click="#" class="btn btn-link">
+                  <a href="#"  class="btn btn-link">
                     <span>{{#}}</span>featured</a>
                 </button>
               </li>
               <li>
-                <button><a href="#" ng-click="#" class="btn btn-link">hot</a></button>
+                <button><a href="#"  class="btn btn-link">hot</a></button>
               </li>
               <li>
-                <button><a href="#" ng-click="#" class="btn btn-link">week</a></button>
+                <button><a href="#"  class="btn btn-link">week</a></button>
               </li>
               <li>
-                <button><a href="#" ng-click="#" class="btn btn-link">month</a></button>
+                <button><a href="#"  class="btn btn-link">month</a></button>
               </li>
           </ul>
         </nav>
@@ -38,7 +32,7 @@
               <br>answers</span>
             <span>{{#}}
               <br>views</span>
-            <a href="#" ng-click="#" class="btn btn-link">
+            <a href="#"  class="btn btn-link">
               <h3>{{question.title}}</h3>
             </a>
             <br>
@@ -59,4 +53,4 @@
     </div>
   </aside>
 
-</div>
+</main>

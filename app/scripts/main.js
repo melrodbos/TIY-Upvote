@@ -4,22 +4,22 @@
   var app = angular.module('tiy-upvote', ['ngRoute', 'restangular' ]);
 
   app.config(function($routeProvider) {
-    $routeProvider.when('../views/questions.html', {
+    $routeProvider.when('/questions', {
       templateUrl: '../views/questions.html',
       controller: 'QuestionsController',
       controllerAs: 'questions'
-
     });
     $routeProvider.when('/answer', {
       templateUrl: '../views/answer.html',
       controller: 'AnswerController',
       controllerAs: 'answer'
     });
-    $routeProvider.when('/ask-question', {
+    $routeProvider.when('/ask', {
       templateUrl: '../views/ask.html',
       controller: 'AskController',
       controllerAs: 'ask'
     });
+    $routeProvider.otherwise('/questions');
   });
 
 // in case a MainController is needed
@@ -41,7 +41,5 @@
 
   })
 */
-
-
 
 })(window);

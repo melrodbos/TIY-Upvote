@@ -1,37 +1,15 @@
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ask a Question</title>
-</head>
-
-  <div class="container" ng-controller="AskController as ask">
-    <nav class="header">
-      <ul class="nav nav-pills pull-right">
-        <li class="active">
-          <li>
-            <button><a href="#" ng-click="#" class="btn btn-default">Questions</a></button>
-          </li>
-          <li>
-            <button><a href="#" ng-click="#" class="btn btn-default">Ask Question</a></button>
-          </li>
-      </ul>
-      <h1 class="text-muted">
-        <strong>
-          <big>TIY-Upvote</big>
-        </strong>
-      </h1>
-    </nav>
-
-    <form>
-      <div class="form-group" id="title">
-        <label for="exampleInputEmail1">Title</label>
-        <input type="text" class="form-control" id="questionTitle" placeholder="What's your programming question? Be specific.">
-      </div>
-      <div class="form-group" id="question">
-        <textarea class="form-control" rows="3"></textarea>
-      </div>
-      <div class="form-group" id="tags">
-        <input type="text" class="form-control" id="tagTaxonomy">
-      </div>
-      <button type="submit" class="btn btn-default">Post Your Question</button>
-    </form>
+<main class="container" ng-controller="AskController as ask">
+  <form>
+    <div class="form-group" id="title">
+      <label for="exampleInputEmail1">Title</label>
+      <input type="text" class="form-control" id="questionTitle" placeholder="What's your programming question? Be specific.">
+    </div>
+    <div class="form-group" id="question">
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+    <div class="form-group" id="tags">
+      <input type="text" class="form-control" id="tagTaxonomy">
+    </div>
+    <button type="submit" class="btn btn-default">Post Your Question</button>
+  </form>
+</main>
