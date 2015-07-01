@@ -1,7 +1,7 @@
 (function() {
 
 
-  var app = angular.module('tiy-upvote', ['ngRoute']);
+  var app = angular.module('tiy-upvote', ['ngRoute', 'restangular' ]);
 
   app.config(function($routeProvider) {
     $routeProvider.when('../views/questions.html', {
