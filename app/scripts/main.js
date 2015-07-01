@@ -4,10 +4,10 @@
   var app = angular.module('tiy-upvote', ['ngRoute']);
 
   app.config(function($routeProvider) {
-    $routeProvider.when('/home', {
-      templateUrl: '../index.html',
-      controller: 'HomeController',
-      controllerAs: 'home'
+    $routeProvider.when('../views/questions.html', {
+      templateUrl: '../views/questions.html',
+      controller: 'QuestionsController',
+      controllerAs: 'questions'
 
     });
     $routeProvider.when('/answer', {
