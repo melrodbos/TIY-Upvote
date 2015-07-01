@@ -7,23 +7,23 @@
   app.config(function($routeProvider) {
     $routeProvider.when('/questions', {
       templateUrl: '../views/questions.html',
-      controller: 'QuestionsController',
-      controllerAs: 'questions'
+      // controller: 'QuestionsController',
+      // controllerAs: 'questions'
     });
     $routeProvider.when('/answer', {
       templateUrl: '../views/answer.html',
-      controller: 'AnswerController',
-      controllerAs: 'answer'
+      // controller: 'AnswerController',
+      // controllerAs: 'answer'
     });
     $routeProvider.when('/ask', {
       templateUrl: '../views/ask.html',
-      controller: 'AskController',
-      controllerAs: 'ask'
+      // controller: 'AskController',
+      // controllerAs: 'ask'
     });
     $routeProvider.otherwise('/questions');
   });
 
-  app.controller('QuestionsController')
+  // app.controller('QuestionsController')
 
 // in case a MainController is needed
 /*
