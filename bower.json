@@ -15,7 +15,8 @@
   "version": "0.0.0",
   "homepage": "https://github.com/melrodbos/TIY-Upvote",
   "authors": [
-    "Melissa Rodríguez <m.rodriguez.bosques@gmail.com>"
+    "Melissa Rodríguez <m.rodriguez.bosques@gmail.com>",
+    "Michael Staehling", "Nick Pope", "Kim Mattiko", "Benjamin Griffith"
   ],
   "license": "CC0",
   "ignore": [
