@@ -59,7 +59,7 @@ gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 gulp.task('html', ['styles'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
-  return gulp.src('app/*.html')
+  return gulp.src('app/**/*.html')
     .pipe(assets)
     // Concatenate And Minify JavaScript
     //https://gist.github.com/Gubbi/7cc71f78326dc9871b3a
