@@ -26,7 +26,7 @@
         </ul>
       </nav>
       <div class="row questions content-current" ng-controller="ListController as list">
-        <div class="col-lg-8 singlepanel" ng-repeat="(key, value) in myObj"> <!--something else needs to go here but need to figure out what -->
+        <div class="col-lg-8 singlepanel" ng-repeat="question in list.questions"> <!--something else might need to go here but need to figure out what -->
           <a href="#" class="btn btn-link">click to see more</a>
           <h4>Title<br>{{list.question.title}}<br></h4>
           <p>Description<br>{{list.question.description}}<br></p>

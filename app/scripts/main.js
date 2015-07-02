@@ -3,7 +3,7 @@
 
   var app = angular.module('tiy-upvote', ['ngRoute', 'restangular' ]);
 
-  app.config(function($routeProvider) {
+  app.config(function($rthiouteProvider) {
     $routeProvider.when('/questions', {
       templateUrl: '../views/questions.html',
       controller: 'QuestionsController',
@@ -22,11 +22,14 @@
     $routeProvider.otherwise('/questions');
   });
 
-ListController //Need to connect the controller here
-$.getJSON('/api/questions.json') //Need to connect to the api filders
-  this.? //need to get curly braces replaced with info
 
+$http.get('/api/questions.json')
 
+app.controller('ListController', function($http){
+  var self = this;
+  self.questions = []; //not sure if this is the right way to get things to populate?
+
+});
 
 
 
