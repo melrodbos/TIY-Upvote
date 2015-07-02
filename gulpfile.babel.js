@@ -10,6 +10,14 @@ const reload = browserSync.reload;
 
 var ngAnnotate = require('gulp-ng-annotate');
 
+var ngAnnotate = require('gulp-ng-annotate');
+
+gulp.task('ng-annotate', function(){
+ return gulp.src('app/scripts/*.js')
+   .pipe(ngAnnotate())
+   .pipe(gulp.dest('dist'));
+});
+
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
     .pipe($.plumber())
