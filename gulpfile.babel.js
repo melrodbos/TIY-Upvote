@@ -55,7 +55,7 @@ gulp.task('html', ['styles'], () => {
     .pipe(assets)
     // Concatenate And Minify JavaScript
     //https://gist.github.com/Gubbi/7cc71f78326dc9871b3a
-    .pipe($.if(‘*.js’, ngAnnotate()))
+    .pipe($.if('*.js', ngAnnotate()))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
