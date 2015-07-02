@@ -34,13 +34,48 @@
     }
   });
 
-// $http.get('/api/questions.json')
-//
-// app.controller('ListController', function($http){
-//   var self = this;
-//   self.questions = []; //not sure if this is the right way to get things to populate?
-//
-// });
 
+app.controller('ListController', function($http){
+  var list = this;
+  list.questions = [ {
+      "title": "Cheesecake jujubes candy canes toffee marzipan",
+      "description": "Powder halvah bonbon apple pie chocolate cake soufflé. Ice cream pie icing tootsie roll chocolate bar sweet roll carrot cake candy canes. Halvah cotton candy croissant. Powder macaroon tart fruitcake tiramisu chupa chups.",
+      "votes": 37,
+      "views": 59,
+      "author": "Lemon Drop",
+      "author_url": "http://placekitten.com/100/100",
+      "time": "May 3, 2015. 4:39am"
+    },
+    {
+      "title": "Cheesecake jujubes candy canes toffee marzipan",
+      "description": "Powder halvah bonbon apple pie chocolate cake soufflé. Ice cream pie icing tootsie roll chocolate bar sweet roll carrot cake candy canes. Halvah cotton candy croissant. Powder macaroon tart fruitcake tiramisu chupa chups.",
+      "votes": 37,
+      "views": 59,
+      "author": "Lemon Drop",
+      "author_url": "http://placekitten.com/100/100",
+      "time": "May 3, 2015. 4:39am"
+    },
+    {
+      "title": "Cheesecake jujubes candy canes toffee marzipan",
+      "description": "Powder halvah bonbon apple pie chocolate cake soufflé. Ice cream pie icing tootsie roll chocolate bar sweet roll carrot cake candy canes. Halvah cotton candy croissant. Powder macaroon tart fruitcake tiramisu chupa chups.",
+      "votes": 37,
+      "views": 59,
+      "author": "Lemon Drop",
+      "author_url": "http://placekitten.com/100/100",
+      "time": "May 3, 2015. 4:39am"
+    },
+   {
+      "title": "Cheesecake jujubes candy canes toffee marzipan",
+      "description": "Powder halvah bonbon apple pie chocolate cake soufflé. Ice cream pie icing tootsie roll chocolate bar sweet roll carrot cake candy canes. Halvah cotton candy croissant. Powder macaroon tart fruitcake tiramisu chupa chups.",
+      "votes": 37,
+      "views": 59,
+      "author": "Lemon Drop",
+      "author_url": "http://placekitten.com/100/100",
+      "time": "May 3, 2015. 4:39am"
+    },
+];
+
+
+  });
 
 })(window);
