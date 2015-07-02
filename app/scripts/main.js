@@ -1,4 +1,4 @@
-/*global angular*/
+/*global angular Firebase*/
 /*TODO: remind eslint about angular http://eslint.org/docs/rules/no-undef.html*/
 (function() {
  'use strict';
@@ -22,6 +22,16 @@
       // controllerAs: 'ask'
     });
     $routeProvider.otherwise('/questions');
+  });
+
+  // start of firebase...
+  var ref = new Firebase('https://intense-torch-7857.firebaseio.com');
+  ref.authWithOAuthPopup('github', function(error, authData) {
+    if (error) {
+      console.log('Login Failed!', error);
+    } else {
+      console.log('Authenticated successfully with payload:', authData);
+    }
   });
 
 // $http.get('/api/questions.json')
