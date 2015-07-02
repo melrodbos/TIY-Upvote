@@ -57,8 +57,11 @@ gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 gulp.task('html', ['styles'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
-  return gulp.src('app/*.html')
+  return gulp.src('app/**/*.html')
     .pipe(assets)
+    // Concatenate And Minify JavaScript
+    //https://gist.github.com/Gubbi/7cc71f78326dc9871b3a
+    .pipe($.if('*.js', ngAnnotate()))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
@@ -170,7 +173,8 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['ngAnnotate', 'lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['ng-annotate', 'lint', 'html', 'images', 'fonts', 'extras'], () => {
+
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
