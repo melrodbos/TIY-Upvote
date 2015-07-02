@@ -25,17 +25,17 @@
           </li>
         </ul>
       </nav>
-      <div class="row questions content-current">
-        <div class="col-lg-8 singlepanel" ng-repeat="question">
+      <div class="row questions content-current" ng-controller="ListController as list">
+        <div class="col-lg-8 singlepanel" ng-repeat="(key, value) in myObj"> <!--something else needs to go here but need to figure out what -->
           <a href="#" class="btn btn-link">click to see more</a>
-          <h4>Title<br>{{question.title}}<br></h4>
-          <p>Description<br>{{question.description}}<br></p>
-          <h5>Author:{{question.author}}</h5>
-          <h5>{{question.author_url}}</h5>
-          <h6>Written:{{question.time}}</h6>
-          <p>Votes<br>{{question.votes}}<br><p>
-          <p>Views<br>{{question.views}}<br></p>
-          <p>Answers:{{question.answers}}</p>
+          <h4>Title<br>{{list.question.title}}<br></h4>
+          <p>Description<br>{{list.question.description}}<br></p>
+          <h5>Author:{{list.question.author}}</h5>
+          <h5>{{list.question.author_url}}</h5>
+          <h6>Written:{{list.question.time}}</h6>
+          <p>Votes<br>{{list.question.votes}}<br><p>
+          <p>Views<br>{{list.question.views}}<br></p>
+          <p>Answers:{{list.question.answers}}</p>
         </div>
       </div>
 
