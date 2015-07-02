@@ -25,14 +25,17 @@
   });
 
   // start of firebase...
-  var ref = new Firebase('https://intense-torch-7857.firebaseio.com');
-  ref.authWithOAuthPopup('github', function(error, authData) {
-    if (error) {
-      console.log('Login Failed!', error);
-    } else {
-      console.log('Authenticated successfully with payload:', authData);
-    }
-  });
+  .contoller('MainController', function($scope){
+  var firebase = new Firebase('https://intense-torch-7857.firebaseio.com');
+
+  var self = this;
+
+  this.login = function(){
+    firebase.authWithOAuthPopup('github', function(error, auth){
+      
+    })
+  }
+});
 
 // $http.get('/api/questions.json')
 //
