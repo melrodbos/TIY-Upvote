@@ -1,16 +1,13 @@
 .tab-row {
-
   font-weight: 400;
-  border: .15ex solid #e0e0e0;
-  border-bottom-color: #fff;
-  border-top: .2ex solid #f90;
+  border-bottom: .15ex solid lightgray;
   display: block;
   text-align: center;
   margin-top: .2ex;
   margin-bottom: 1ex;
   ul li {
     display: inline-block;
-    width: 18.2%;
+    width: 16%;
     min-width: 3em;
     padding: 0;
     line-height: 2em;
@@ -21,7 +18,6 @@
    width: 100%;
    text-decoration: none;
    padding: .45ex 0 .45ex 0;
-   color: lightgray;
    font-size: 3ex;
    line-height: 1.5em;
   }
