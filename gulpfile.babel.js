@@ -10,6 +10,8 @@ const reload = browserSync.reload;
 
 var ngAnnotate = require('gulp-ng-annotate');
 
+var ngAnnotate = require('gulp-ng-annotate');
+
 gulp.task('ng-annotate', function(){
  return gulp.src('app/scripts/*.js')
    .pipe(ngAnnotate())
@@ -59,6 +61,9 @@ gulp.task('html', ['styles'], () => {
 
   return gulp.src('app/*.html')
     .pipe(assets)
+    // Concatenate And Minify JavaScript
+    //https://gist.github.com/Gubbi/7cc71f78326dc9871b3a
+    .pipe($.if('*.js', ngAnnotate()))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
