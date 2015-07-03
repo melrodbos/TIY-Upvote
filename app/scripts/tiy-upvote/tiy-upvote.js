@@ -1,6 +1,8 @@
-/*global angular Firebase*/
+/*global angular */
 /*TODO: remind eslint about angular http://eslint.org/docs/rules/no-undef.html*/
 (function() {
+    'use strict';
+
   angular.module('tiy-upvote', ['ngRoute', 'restangular'])
     .config(function($routeProvider) {
       $routeProvider.when('/questions', {
@@ -26,23 +28,8 @@
     .config(function(RestangularProvider) {
 
     })
-  var self = this;
-
-  this.login = function() {
-    firebase.authWithOAuthPopup('github', function(error, auth) {
-      $scope.$apply(function() {
-
-      });
-    });
-  }
 
 
-
-
-
-
-
-  
 
 
 })(window);
