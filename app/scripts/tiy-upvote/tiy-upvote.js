@@ -18,13 +18,13 @@
         // controller: 'AskController',
         // controllerAs: 'ask'
       });
-      $routeProvider.otherwise('/questions');
+      $routeProvider.otherwise('/404');
     }) // END config($routeProvider)
     .config(function(RestangularProvider){
 
     })
     .controller('MainController', function($scope){
-      var firebase = new Firebase('https://glowing-inferno-3596.firebaseio.com');
+      var firebase = new Firebase('https://intense-torch-7857.firebaseio.com');
 
       var self = this;
 
@@ -34,7 +34,7 @@
 
           });
         });
-      } // END login
+      }
     }) ;
 
 
