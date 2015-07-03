@@ -1,5 +1,45 @@
 <main class="container">
-  <form>
+  <!--  Review Form -->
+            <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)" novalidate>
+              <!--  Live Preview -->
+              <!-- <blockquote>
+                <strong>{{review.stars}} Stars</strong>
+                {{review.body}}
+                <cite class="clearfix">—{{review.author}}</cite>
+              </blockquote> -->
+
+              <!--  Review Form, Code School (reference implementation) -->
+              <fieldset class="form-group">
+                <strong>Title</strong>
+                <input type="text" placeholder="What's your programming question? Be specific." ng-model="reviewCtrl.review.stars" class="form-control" title="Stars">
+                </input>
+              </fieldset>
+              <!-- ask_question text area size: per reference implementation -->
+              <fieldset class="form-group">
+                <textarea ng-model="reviewCtrl.review.body" class="form-control" placeholder="Write your question here..." cols="92" rows="15" tabindex="101" title="Review"></textarea>
+              </fieldset>
+              <fieldset class="form-group">
+                <strong>Tags</strong>
+                <input ng-model="reviewCtrl.review.author" type="email" class="form-control" title="Email" />
+              </fieldset>
+              <fieldset class="form-group">
+                <input type="checkbox"><label for="email_responses">Send me new responses to my posts via email</label><a href="#"> (settings)</a>
+
+              </fieldset>
+              <fieldset class="form-group">
+                <input type="submit" class="btn btn-primary pull-left" value="Post Your Question" />
+              </fieldset>
+            </form>
+
+
+
+
+
+
+
+
+
+  <!-- <form>
     <div class="form-group" id="title">
       <label for="exampleInputEmail1">Title</label>
       <input type="text" class="form-control" id="questionTitle" placeholder="What's your programming question? Be specific.">
@@ -11,5 +51,5 @@
       <input type="text" class="form-control" id="tagTaxonomy">
     </div>
     <button type="submit" class="btn btn-default">Post Your Question</button>
-  </form>
+  </form> -->
 </main>

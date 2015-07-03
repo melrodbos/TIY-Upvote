@@ -5,6 +5,19 @@
 
   var app = angular.module('tiy-upvote', ['ngRoute', 'restangular' ]);
 
+  app.controller("ReviewController", function() {
+    this.review = {};
+
+    this.addReview = function(product) {
+      product.reviews.push(this.review);
+      this.review = {};
+    };
+  })
+
+
+
+
+
   app.config(function($routeProvider) {
     $routeProvider.when('/questions', {
       templateUrl: '/views/questions.html'
