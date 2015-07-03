@@ -4,7 +4,7 @@
  'use strict';
 
   var app = angular.module('tiy-upvote', ['ngRoute', 'restangular' ]);
-
+//Ask a question controller...
   app.controller('AskController', function() {
     this.ask = {};
 
@@ -13,11 +13,7 @@
       this.ask = {};
     };
   })
-
-
-
-
-
+//Start of routes...
   app.config(function($routeProvider) {
     $routeProvider.when('/questions', {
       templateUrl: '/views/questions.html'
