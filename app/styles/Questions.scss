@@ -2,7 +2,8 @@
   font-weight: 400;
   border-bottom: .15ex solid lightgray;
   display: block;
-  text-align: center;
+  text-align: right;
+  width: 100%;
   margin-top: .2ex;
   margin-bottom: 1ex;
   ul li {
@@ -71,7 +72,17 @@ section {
 .container .panels .content-current {
   display: block;
 }
-#votesTotal #answerTotal #viewsTotal {
+.row.questions {
+  width: 100%;
+  .counters {
+    width: 100%;
+    display: inline-block;
+  }
+}
+.footer {
   float: left;
   display: block;
+}
+.footer > ul {
+  display: inline-block;
 }
