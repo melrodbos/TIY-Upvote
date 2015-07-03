@@ -9,14 +9,17 @@
         // controllerAs: 'questions'
       });
       $routeProvider.when('/answer', {
-        templateUrl: '../views/answer.html',
+        templateUrl: 'views/answer.html',
         // controller: 'AnswerController',
         // controllerAs: 'answer'
       });
       $routeProvider.when('/ask', {
-        templateUrl: '../views/ask.html',
+        templateUrl: 'views/ask.html',
         // controller: 'AskController',
         // controllerAs: 'ask'
+      });
+      $routeProvider.when('/one-question', {
+        templateUrl: 'views/one-question.html'
       });
       $routeProvider.otherwise('/404');
     }) // END config($routeProvider)
@@ -37,7 +40,7 @@
       }
 
 
-    }) 
+    })
 
     .controller('ListController', function($http){
       var list = this;
