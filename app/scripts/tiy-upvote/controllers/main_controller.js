@@ -3,7 +3,7 @@
 (function(){
     'use strict';
 
-angular.module('tiy-upvote')
+angular.module('tiy-upvote');
 
 .controller('MainController', function($scope){
   var firebase = new Firebase('https://intense-torch-7857.firebaseio.com');
@@ -19,8 +19,8 @@ angular.module('tiy-upvote')
 
       });
     });
-  }
+  };
 
 
-})
+});
 })();
