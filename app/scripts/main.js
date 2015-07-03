@@ -5,12 +5,12 @@
 
   var app = angular.module('tiy-upvote', ['ngRoute', 'restangular' ]);
 
-  app.controller("ReviewController", function() {
-    this.review = {};
+  app.controller('AskController', function() {
+    this.ask = {};
 
-    this.addReview = function(product) {
-      product.reviews.push(this.review);
-      this.review = {};
+    this.addAsk = function(product) {
+      product.reviews.push(this.ask);
+      this.ask = {};
     };
   })
 
