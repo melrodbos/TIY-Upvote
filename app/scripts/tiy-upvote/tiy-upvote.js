@@ -24,11 +24,11 @@
         templateUrl: 'views/one-question.html'
       });
       $routeProvider.otherwise('/404');
-    }) // END config($routeProvider)
-    .config(function(RestangularProvider) {
-
-    });
-
+    }); // END config($routeProvider)
+    // .config(function(RestangularProvider) {
+    //
+    // });
+// Above function commented out -- for `eslint` build release 0.2.0 (it was an empty function and `eslint` wouldn't pass it)
 
 
 
