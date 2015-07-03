@@ -1,15 +1,29 @@
 <main class="container">
-  <form>
-    <div class="form-group" id="title">
-      <label for="exampleInputEmail1">Title</label>
-      <input type="text" class="form-control" id="questionTitle" placeholder="What's your programming question? Be specific.">
-    </div>
-    <div class="form-group" id="question">
-      <textarea class="form-control" rows="3"></textarea>
-    </div>
-    <div class="form-group" id="tags">
-      <input type="text" class="form-control" id="tagTaxonomy">
-    </div>
-    <button type="submit" class="btn btn-default">Post Your Question</button>
+  <!--  Review Form -->
+  <form name="askForm" ng-controller="AskController as ask" ng-submit="askForm.$valid && ask.addAsk(list)" novalidate>
+    <!-- input your question field -->
+    <fieldset class="form-group">
+      <strong>Title</strong>
+      <input ng-model="ask.questions" type="text" placeholder="What's your programming question? Be specific." title="Questions"  class="form-control" required>
+      </input>
+    </fieldset>
+    <!-- ask_question text area size: per reference implementation -->
+    <fieldset class="form-group">
+      <textarea class="form-control" cols="92" rows="15" tabindex="101" title="Information" ng-model="ask.body" required></textarea>
+    </fieldset>
+    <!-- tags -->
+    <fieldset class="form-group">
+      <strong>Tags</strong>
+      <input ng-model="ask.tags" type="text" class="form-control" title="Tags" required />
+    </fieldset>
+    <!-- checkbox -->
+    <fieldset class="form-group">
+      <input ng-model="ask.checkbox" type="checkbox" />
+      <label for="email_responses">Send me new responses to my posts via email</label><a href="#"> (settings)</a>
+    </fieldset>
+    <!--   testing form validation (true: when all fields completed) -->
+    <div> askForm is {{askForm.$valid}}</div>
+    <!-- submit question button -->
+    <input type="submit" ng-click="update(user)" class="btn btn-primary pull-left" value="Post Your Question" />
   </form>
 </main>
