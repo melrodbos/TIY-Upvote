@@ -37,43 +37,13 @@
 
 app.controller('ListController', function($http){
   var list = this;
-  list.questions = [ {
-      "title": "Cheesecake jujubes candy canes toffee marzipan",
-      "description": "Powder halvah bonbon apple pie chocolate cake soufflé. Ice cream pie icing tootsie roll chocolate bar sweet roll carrot cake candy canes. Halvah cotton candy croissant. Powder macaroon tart fruitcake tiramisu chupa chups.",
-      "votes": 37,
-      "views": 59,
-      "author": "Lemon Drop",
-      "author_url": "http://placekitten.com/100/100",
-      "time": "May 3, 2015. 4:39am"
-    },
-    {
-      "title": "Cheesecake jujubes candy canes toffee marzipan",
-      "description": "Powder halvah bonbon apple pie chocolate cake soufflé. Ice cream pie icing tootsie roll chocolate bar sweet roll carrot cake candy canes. Halvah cotton candy croissant. Powder macaroon tart fruitcake tiramisu chupa chups.",
-      "votes": 37,
-      "views": 59,
-      "author": "Lemon Drop",
-      "author_url": "http://placekitten.com/100/100",
-      "time": "May 3, 2015. 4:39am"
-    },
-    {
-      "title": "Cheesecake jujubes candy canes toffee marzipan",
-      "description": "Powder halvah bonbon apple pie chocolate cake soufflé. Ice cream pie icing tootsie roll chocolate bar sweet roll carrot cake candy canes. Halvah cotton candy croissant. Powder macaroon tart fruitcake tiramisu chupa chups.",
-      "votes": 37,
-      "views": 59,
-      "author": "Lemon Drop",
-      "author_url": "http://placekitten.com/100/100",
-      "time": "May 3, 2015. 4:39am"
-    },
-   {
-      "title": "Cheesecake jujubes candy canes toffee marzipan",
-      "description": "Powder halvah bonbon apple pie chocolate cake soufflé. Ice cream pie icing tootsie roll chocolate bar sweet roll carrot cake candy canes. Halvah cotton candy croissant. Powder macaroon tart fruitcake tiramisu chupa chups.",
-      "votes": 37,
-      "views": 59,
-      "author": "Lemon Drop",
-      "author_url": "http://placekitten.com/100/100",
-      "time": "May 3, 2015. 4:39am"
-    },
-];
+  list.questions = [ ];
+
+  $http.get('/api/questions.json')
+    .then(function(response){
+      console.log(response);
+      list.questions = response.data;
+    });
 
 
   });
