@@ -34,32 +34,6 @@
     }
   });
 
-//Ask a question controller...
-// $.ajax('https://glowing-inferno-3333.firebaseio.com/foo.json', {
-//   method: ‘PUT'
-// data: '[ … ]'
-// }).then(tracer)
-
-$.ajax('http://intense-torch-7857.firebaseio.com/answers.json', {
-  method: 'GET'
-  data: '[ ]'
-}).then(tracer)
-
-
-
-  app.controller('AskController', function($scope) {
-    var firebase = new Firebase('http://intense-torch-7857.firebaseio.com');
-    var ask = this;
-  
-
-    ask = [];
-    $http.post(firebase);
-    .then(function(data) {
-
-      this.ask = {};
-    };
-  });
-
 //List Controller...
 app.controller('ListController', function($http){
   var list = this;
