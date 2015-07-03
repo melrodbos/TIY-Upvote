@@ -31,17 +31,26 @@
       this.login = function(){
         firebase.authWithOAuthPopup('github', function(error, auth){
           $scope.$apply(function(){
-            
+
           });
         });
       } // END login
-    }) // END controller(MainController)
-  ; // END module('tiy-upvote')
+    }) ;
 
-  // app.controller(..., function(){
-  //   // 150 lines or so... Where was I again?
-  // }); // END controller(...)
-  //
-  // app.controller(...);
+
+
+app.controller('ListController', function($http){
+  var list = this;
+  list.questions = [ ];
+
+  $http.get('/api/questions.json')
+    .then(function(response){
+      console.log(response);
+      list.questions = response.data;
+    });
+
+
+  });
+
 
 })(window);
