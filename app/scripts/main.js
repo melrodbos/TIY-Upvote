@@ -4,15 +4,6 @@
  'use strict';
 
   var app = angular.module('tiy-upvote', ['ngRoute', 'restangular' ]);
-//Ask a question controller...
-  app.controller('AskController', function() {
-    this.ask = {};
-
-    this.addAsk = function(product) {
-      product.reviews.push(this.ask);
-      this.ask = {};
-    };
-  })
 //Start of routes...
   app.config(function($routeProvider) {
     $routeProvider.when('/questions', {
@@ -43,7 +34,17 @@
     }
   });
 
+//Ask a question controller...
+  app.controller('AskController', function() {
+    this.ask = {};
 
+    this.addAsk = function(list) {
+      list.push(this.ask);
+      this.ask = {};
+    };
+  });
+
+//List Controller...
 app.controller('ListController', function($http){
   var list = this;
   list.questions = [ {

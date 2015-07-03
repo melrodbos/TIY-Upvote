@@ -1,10 +1,10 @@
 <main class="container">
   <!--  Review Form -->
-  <form name="askForm" ng-controller="AskController as askCtrl" ng-submit="askCtrl.addAsk" novalidate>
+  <form name="askForm" ng-controller="AskController as askCtrl" ng-submit="askForm.$valid && askCtrl.addAsk(list)" novalidate>
     <!-- input your question field -->
     <fieldset class="form-group">
       <strong>Title</strong>
-      <input type="text" placeholder="What's your programming question? Be specific." title="Questions" ng-model="askCtrl.ask.questions" class="form-control" required>
+      <input ng-model="askCtrl.ask.questions" type="text" placeholder="What's your programming question? Be specific." title="Questions"  class="form-control" required>
       </input>
     </fieldset>
     <!-- ask_question text area size: per reference implementation -->
@@ -14,11 +14,11 @@
     <!-- tags -->
     <fieldset class="form-group">
       <strong>Tags</strong>
-      <input type="text" class="form-control" title="Tags" ng-model="askCtrl.ask.tags" required/>
+      <input ng-model="askCtrl.ask.tags" type="text" class="form-control" title="Tags" required />
     </fieldset>
     <!-- checkbox -->
     <fieldset class="form-group">
-      <input type="checkbox">
+      <input ng-model="askCtrl.ask.checkbox" type="checkbox" />
       <label for="email_responses">Send me new responses to my posts via email</label><a href="#"> (settings)</a>
     </fieldset>
     <!--   testing form validation (true: when all fields completed) -->
