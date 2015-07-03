@@ -31,7 +31,7 @@
       this.login = function(){
         firebase.authWithOAuthPopup('github', function(error, auth){
           $scope.$apply(function(){
-            self.username = auth.github.username
+            
           });
         });
       } // END login
