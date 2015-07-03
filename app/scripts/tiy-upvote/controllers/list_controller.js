@@ -1,4 +1,7 @@
+/* global angular */
+
 (function(){
+    'use strict';
 angular.module('tiy-upvote')
 
 .controller('ListController', function($http) {
@@ -13,5 +16,5 @@ angular.module('tiy-upvote')
 
 
 
-})
+});
 })();
