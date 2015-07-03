@@ -28,7 +28,7 @@
       </nav>
       <div class="row questions content-current" ng-controller="ListController as list">
         <div class="col-lg-8 singlepanel" ng-repeat="question in list.questions"> <!--something else might need to go here but need to figure out what -->
-          <a href="#">click to see more</a>
+          <a href="#/one-question">click to see more</a>
           <h4>Title<br>{{question.title}}<br></h4>
           <p>Description<br>{{question.description}}<br></p>
           <h5>Author:{{question.author}}</h5>
