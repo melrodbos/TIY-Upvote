@@ -1,16 +1,13 @@
 .tab-row {
-
   font-weight: 400;
-  border: .15ex solid #e0e0e0;
-  border-bottom-color: #fff;
-  border-top: .2ex solid #f90;
+  border-bottom: .15ex solid lightgray;
   display: block;
   text-align: center;
   margin-top: .2ex;
   margin-bottom: 1ex;
   ul li {
     display: inline-block;
-    width: 18.2%;
+    width: 15%;
     min-width: 3em;
     padding: 0;
     line-height: 2em;
@@ -72,5 +69,9 @@ section {
 }
 
 .container .panels .content-current {
+  display: block;
+}
+#votesTotal #answerTotal #viewsTotal {
+  float: left;
   display: block;
 }
