@@ -18,7 +18,7 @@
         // controller: 'AskController',
         // controllerAs: 'ask'
       });
-      $routeProvider.otherwise('/questions');
+      $routeProvider.otherwise('/404');
     }) // END config($routeProvider)
     .config(function(RestangularProvider){
 
@@ -34,7 +34,7 @@
 
           });
         });
-      } // END login
+      }
     }) ;
 
 
