@@ -1,3 +1,5 @@
+/* global: angular _ Firebase */
+
 (function(){
 angular.module('tiy-upvote')
 
