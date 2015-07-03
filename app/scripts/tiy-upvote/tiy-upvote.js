@@ -1,38 +1,42 @@
 /*global angular Firebase*/
 /*TODO: remind eslint about angular http://eslint.org/docs/rules/no-undef.html*/
 (function() {
- 'use strict';
+  angular.module('tiy-upvote', ['ngRoute', 'restangular' ])
+    .config(function($routeProvider) {
+      $routeProvider.when('/questions', {
+        templateUrl: 'views/questions.html',
+        // controller: 'QuestionsController',
+        // controllerAs: 'questions'
+      });
+      $routeProvider.when('/answer', {
+        templateUrl: '../views/answer.html',
+        // controller: 'AnswerController',
+        // controllerAs: 'answer'
+      });
+      $routeProvider.when('/ask', {
+        templateUrl: '../views/ask.html',
+        // controller: 'AskController',
+        // controllerAs: 'ask'
+      });
+      $routeProvider.otherwise('/questions');
+    }) // END config($routeProvider)
+    .config(function(RestangularProvider){
 
-  var app = angular.module('tiy-upvote', ['ngRoute', 'restangular' ]);
+    })
+    .controller('MainController', function($scope){
+      var firebase = new Firebase('https://glowing-inferno-3596.firebaseio.com');
 
-  app.config(function($routeProvider) {
-    $routeProvider.when('/questions', {
-      templateUrl: '/views/questions.html'
-      // controller: 'QuestionsController',
-      // controllerAs: 'questions'
-    });
-    $routeProvider.when('/answer', {
-      templateUrl: '/views/answer.html'
-      // controller: 'AnswerController',
-      // controllerAs: 'answer'
-    });
-    $routeProvider.when('/ask', {
-      templateUrl: '/views/ask.html'
-      // controller: 'AskController',
-      // controllerAs: 'ask'
-    });
-    $routeProvider.otherwise('/questions');
-  });
+      var self = this;
 
-  // start of firebase...
-  var ref = new Firebase('https://intense-torch-7857.firebaseio.com');
-  ref.authWithOAuthPopup('github', function(error, authData) {
-    if (error) {
-      console.log('Login Failed!', error);
-    } else {
-      console.log('Authenticated successfully with payload:', authData);
-    }
-  });
+      this.login = function(){
+        firebase.authWithOAuthPopup('github', function(error, auth){
+          $scope.$apply(function(){
+
+          });
+        });
+      } // END login
+    }) ;
+
 
 
 app.controller('ListController', function($http){
@@ -47,5 +51,6 @@ app.controller('ListController', function($http){
 
 
   });
+
 
 })(window);
