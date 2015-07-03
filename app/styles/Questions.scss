@@ -56,19 +56,6 @@ section {
   display: none;
   width: 100%;
 }
-
-.singlepanel {
-  display: block;
-  width: 90%;
-  margin: auto;
-  text-align: center;
-}
-
-.singlepanel > p {
-  font-size: 2ex;
-  margin-bottom: 1ex;
-}
-
 .container .panels .content-current {
   display: block;
 }
@@ -78,6 +65,16 @@ section {
     width: 100%;
     display: inline-block;
   }
+}
+#questionTitle {
+  display:inline-block;
+  position: relative;
+  align: left;
+  width: 100%;
+}
+#Author {
+  align: right;
+  display: inline-block;
 }
 .footer {
   float: left;
