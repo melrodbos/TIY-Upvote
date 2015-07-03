@@ -1,0 +1,17 @@
+<div class="col-lg-8 singlepanel" ng-repeat="question in list.questions"> <!--something else might need to go here but need to figure out what -->
+  <a href="#">click to see more</a>
+  <h4>Title<br>{{question.title}}<br></h4>
+  <p>Description<br>{{question.description}}<br></p>
+  <h5>Author:{{question.author}}</h5>
+  <h5>{{question.author_url}}</h5>
+  <h6>Written:{{question.time}}</h6>
+  <p>Votes<br>{{question.votes}}<br><p>
+  <p>Views<br>{{question.views}}<br></p>
+  <p>Answers:{{question.answers}}</p>
+</div>
+<form>
+  <div class="form-group" id="tags">
+    <input type="text" class="form-control" id="tagTaxonomy">
+  </div>
+  <button type="submit" class="btn btn-default">Submit Your Answer</button>
+</form>
