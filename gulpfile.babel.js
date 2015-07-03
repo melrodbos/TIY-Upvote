@@ -10,12 +10,10 @@ const reload = browserSync.reload;
 
 var ngAnnotate = require('gulp-ng-annotate');
 
-var ngAnnotate = require('gulp-ng-annotate');
-
 gulp.task('ng-annotate', function(){
- return gulp.src('app/scripts/*.js')
-   .pipe(ngAnnotate())
-   .pipe(gulp.dest('dist'));
+  return gulp.src('app/scripts/*.js')
+    .pipe(ngAnnotate())
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('styles', () => {
@@ -114,7 +112,8 @@ gulp.task('serve', ['styles', 'fonts'], () => {
     server: {
       baseDir: ['app', '.tmp'],
       routes: {
-        '/bower_components': 'bower_components'
+        '/bower_components': 'bower_components',
+        '/api': 'api'
       }
     },
     directory: true
@@ -137,7 +136,11 @@ gulp.task('serve:dist', () => {
     notify: false,
     port: 9000,
     server: {
-      baseDir: ['dist']
+      baseDir: ['dist'],
+      routes: {
+        '/bower_components': 'bower_components',
+        '/api': 'api'
+      }
     }
   });
 });
@@ -150,7 +153,7 @@ gulp.task('serve:test', () => {
     server: {
       baseDir: 'test',
       routes: {
-        '/bower_components': 'bower_components'
+        '/bower_components': 'bower_components',
       }
     }
   });
@@ -176,6 +179,7 @@ gulp.task('wiredep', () => {
 });
 
 gulp.task('build', ['ng-annotate', 'lint', 'html', 'images', 'fonts', 'extras'], () => {
+
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
