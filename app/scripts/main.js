@@ -35,11 +35,12 @@
   });
 
 //Ask a question controller...
-  app.controller('AskController', function() {
-    this.ask = {};
+  app.controller('AskController', function($http) {
+    var ask = this;
+    ask = [];
+    $http.post(firebase);
+    .then(function(data) {
 
-    this.addAsk = function(list) {
-      list.push(this.ask);
       this.ask = {};
     };
   });
