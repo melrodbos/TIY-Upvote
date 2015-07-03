@@ -16,12 +16,13 @@
                 <strong>Tags</strong>
                 <input type="text" class="form-control" title="Tags" ng-model="askCtrl.ask.tags" required/>
               </fieldset>
-                <!-- ask_question text area size: per reference implementation (stackoverflow) -->
+                <!-- checkbox -->
               <fieldset class="form-group">
                 <input type="checkbox"><label for="email_responses">Send me new responses to my posts via email</label><a href="#"> (settings)</a>
               </fieldset>
             <!--   testing form validation (true: when all fields completed) -->
               <div> askForm is {{askForm.$valid}}</div>
+                <!-- submit question button -->
                 <input type="submit" class="btn btn-primary pull-left" value="Post Your Question"/>
             </form>
 
