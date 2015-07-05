@@ -1,23 +1,67 @@
-/* global angular */
-(function(){
-'use strict';
+// /* global angular */
+// (function(){
+//   'use strict';
+//
+//   // PostCtrl=AskController
+//   //
+//   angular.module('tiy-upvote').controller('')
+//   app.controller('AskController', function($scope){
+//     $scope.post =
+//   });
+// });
 
-var app = angular.module('tiy-upvote', ['ng-route', 'restangular']);
-//Ask a question controller...
-app.cotroller("AskController", function(){
-  //substitute "product" for "question"
-  this.question = {};
-// Push review onto this "ask" questions "array"...
-  this.addQuestion = function(ask) {
-    ask.questions.push(this.question);
-    this.question = {};
-  };
 
-});
-});
+
+
+
+
+
+
+
+// /* global angular */
+// (function(){
+// 'use strict';
+//
+//
+// var app= angular.module("tiy-upvote", ["firebase"]);
+//
+// app.controller("AskController", function($scope, $))
+//
+// angular.module('tiy-upvote')
+// .controller('AskController', function($scope){
+//   $scope.call
+// }]);
+//
+//
+//
+//
+//
+// var app = angular.module('tiy-upvote', ['ngRoute', 'restangular']);
+// // Ask a question controller...
+// app.cotroller('AskController', function(){
+//   //substitute "product" for "question"
+//   this.question = {};
+// // Push review onto this "ask" questions "array"...
+//   this.addQuestion = function(ask){
+//     ask.questions.push(this.question);
+//     this.question = {};
+//   };
+//
+// });
+
+// app.controller('AskController', function($scope){
+//   $scope.questions = [];
+//   $scope.question = {title: '', info: '', tags: ''};
+//
+//   $scope.posts.push($scope.post);
+//   $scope.post = {title: '', info: '', tags: ''};
+// });
+
+
+// });
 
 // app.controller("AskController", function($scope) {
-//   $scope.post = {title: '', question: ''};
+//   $scope.question = {title: '', question: ''};
 //
 // });
 //Start of Route...

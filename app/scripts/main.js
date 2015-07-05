@@ -3,7 +3,7 @@
 (function() {
  'use strict';
 
-  var app = angular.module('tiy-upvote', ['ngRoute', 'restangular' ]);
+  var app = angular.module('tiy-upvote', ['ngRoute', 'restangular']);
 //Start of routes...
   app.config(function($routeProvider) {
     $routeProvider.when('/questions', {
@@ -18,8 +18,8 @@
     });
     // $routeProvider.when('/ask', {
     //   templateUrl: '/views/ask.html'
-      // controller: 'AskController',
-      // controllerAs: 'ask'
+    //   controller: 'AskController',
+    //   controllerAs: 'askCtrl'
     // });
     $routeProvider.otherwise('/questions');
   });
