@@ -9,13 +9,13 @@
     </bloquote>
     </ul>
     <!--  Review Form -->
-  <form name="askForm" ng-controller="AskController as askCtrl" ng-submit="askForm.addQuestion(ask)">
+  <form name="askForm" ng-submit="askForm.addQuestion(ask)">
     <fieldset class="form-group">
       <strong>Title</strong>
       <input type="text" placeholder="What's your programming question? Be specific." title="Questions"  class="form-control" ng-model="askCtrl.question.title" required>
       </input>
     </fieldset>
-    <!-- ask_question text area size: per reference implementation -->
+    <!-- ask_question text area size: per reference implementation (code school) -->
     <fieldset class="form-group">
       <textarea class="form-control" cols="92" rows="15" tabindex="101" title="Information" ng-model="askCtrl.question.info" required></textarea>
     </fieldset>
