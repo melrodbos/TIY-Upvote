@@ -1,14 +1,15 @@
-<p>{{"hello " + "you!"}}</p>
+<body class="container" ng-app="tiy-upvote">
 
-<main ng-app="tiy-upvote" class="container">
-  <!--  Review Form -->
-  <form name="askForm" ng-controller="AskController as askCtrl"
-                       ng-submit="askCtrl.addQuestion(ask)">
     <!-- input your question field -->
+    <ul ng-repeat="question in ask.questions">
     <bloquote>
-      <h3>{{askCtrl.question.title}}</h3>
-
+      <h3>{{question.title}}</h3>
+      {{question.info}}
+      {{question.tags}}
     </bloquote>
+    </ul>
+    <!--  Review Form -->
+  <form name="askForm" ng-controller="AskController as askCtrl" ng-submit="askForm.addQuestion(ask)">
     <fieldset class="form-group">
       <strong>Title</strong>
       <input type="text" placeholder="What's your programming question? Be specific." title="Questions"  class="form-control" ng-model="askCtrl.question.title" required>
@@ -29,6 +30,6 @@
       <label for="email_responses">Send me new responses to my posts via email</label><a href="#"> (settings)</a>
     </fieldset>
     <!-- submit question button -->
-    <input type="submit" ng-submit="update(user)" class="btn btn-primary pull-left" value="Post Your Question" onclick="getFields();"/>
+    <input type="submit" ng-submit="update(user)" class="btn btn-primary pull-left" value="Post Your Question" />
   </form>
-</main>
+</body>
