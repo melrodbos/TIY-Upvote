@@ -8,31 +8,29 @@
     </bloquote>
     </ul>
   <!--  Review Form -->
-  <form name="askForm" ng-controller="AskController as ask" ng-submit="form-group">
+  <form name="askForm" ng-controller="AskController as ask" ng-submit="askForm.addQuestion(ask)" class="form-group">
     <!-- input your question field -->
     <fieldset class="form-group">
       <strong>Title</strong>
-      <input ng-model="ask.questions" type="text" placeholder="What's your programming question? Be specific." title="Questions"  class="form-control" required>
+      <input type="text" placeholder="What's your programming question? Be specific." title="Questions"  class="form-control" ng-model="askCtrl.question.title" required>
       </input>
     </fieldset>
     <!-- ask_question text area size: per reference implementation -->
     <fieldset class="form-group">
-      <textarea class="form-control" cols="92" rows="15" tabindex="101" title="Information" ng-model="ask.body" required></textarea>
+      <textarea class="form-control" cols="92" rows="15" tabindex="101" title="Information" ng-model="askCtrl.question.info" required></textarea>
     </fieldset>
     <!-- tags -->
     <fieldset class="form-group">
       <strong>Tags</strong>
-      <input ng-model="ask.tags" type="text" class="form-control" title="Tags" required />
+      <input type="text" class="form-control" title="Tags" ng-model="askCtrl.question.tags" required />
     </fieldset>
     <!-- checkbox -->
     <fieldset class="form-group">
-      <input ng-model="ask.checkbox" type="checkbox" />
+      <input type="checkbox" ng-model="askCtrl.question.checkbox" />
       <label for="email_responses">Send me new responses to my posts via email</label><a href="#"> (settings)</a>
     </fieldset>
-    <!--   testing form validation (true: when all fields completed) -->
-    <div> askForm is {{askForm.$valid}}</div>
     <!-- submit question button -->
-    <input type="submit" ng-click="update(user)" class="btn btn-primary pull-left" value="Post Your Question" onclick="getFields();"/>
-      <input type="submit" ng-click="reset()" class="btn btn-primary pull-left" value="Boom!" />
+    <input type="submit" ng-click="update(user)" class="btn btn-primary pull-left" value="Post Your Question" />
+
   </form>
 </body>
