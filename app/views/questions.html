@@ -1,8 +1,6 @@
-
 <main class="container-fluid">
-  <div class="row questions">
-    <div class="col-lg-12">
-      <nav class="tab-row">
+
+      <nav class="tab-row col-lg-6-offset-3">
         <ul class="nav">
           <li class="active">
             <li class="tab-current">
@@ -26,44 +24,50 @@
           </li>
         </ul>
       </nav>
+
       <div class="row questions content-current" ng-controller="ListController as list">
-        <div class="col-lg-8 singlepanel" ng-repeat="question in list.questions"> <!--something else might need to go here but need to figure out what -->
-          <a href="#">click to see more</a>
-          <h4>Title<br>{{question.title}}<br></h4>
-          <p>Description<br>{{question.description}}<br></p>
-          <h5>Author:{{question.author}}</h5>
-          <h5>{{question.author_url}}</h5>
-          <h6>Written:{{question.time}}</h6>
-          <p>Votes<br>{{question.votes}}<br><p>
-          <p>Views<br>{{question.views}}<br></p>
-          <p>Answers:{{question.answers}}</p>
+        <div class="col-lg-12 singlepanel" ng-repeat="question in list.questions">
+          <section class="col-lg-4 counters">
+            <p class="col-lg-1" id="votesTotal">{{question.votes}}
+              <br>votes</p>
+                <p class="col-lg-1 offset-1" id="answerTotal">{{question.answers}}
+                  <br>answers</p>
+                <p class="col-lg-1" id="viewsTotal">{{question.views}}
+                  <br>views</p>
+          </section><!-- end counters -->
+          <div class="col-lg-8 pull-right">
+            <h4 id="questionTitle">Title
+              <br>{{question.title}}
+              <br>
+            </h4>
+            <span id="timeWritten">Written:{{question.time}}</span>
+          <h5 id="Author">{{question.author}}</h5>
+            <a href="#">click to see more</a>
+          </div><!-- end question -->
         </div>
-      </div>
+      </div><!-- end question container -->
 
-
-        <footer class="footer">
-        <ul>
-          <a href="#">Technology</a>
-          <li>blah</li>
-          <li>blah</li>
-          <li>blah</li>
-          <li>blah</li>
-        </ul>
-        <ul>
-          <a href="#">Other Things</a>
-          <li>blah</li>
-          <li>blah</li>
-          <li>blah</li>
-          <li>blah</li>
-        </ul>
-        <ul>
-          <a href="#">Contact Us</a>
-          <li>blah</li>
-          <li>blah</li>
-          <li>blah</li>
-          <li>blah</li>
-        </ul>
-      </footer>
-      </div>
-    </div>
+    <footer class="footer col-lg-12">
+      <ul class="col-lg-3 pull-left">
+        <a href="#" id="Technology">Technology</a>
+        <li>blah</li>
+        <li>blah</li>
+        <li>blah</li>
+        <li>blah</li>
+      </ul>
+      <ul class="col-lg-3">
+        <a href="#" id="OtherThings">Other Things</a>
+        <li>blah</li>
+        <li>blah</li>
+        <li>blah</li>
+        <li>blah</li>
+      </ul>
+      <ul class="col-lg-3 pull-right">
+        <a href="#" id="ContactUs">Contact Us</a>
+        <li>blah</li>
+        <li>blah</li>
+        <li>blah</li>
+        <li>blah</li>
+      </ul>
+    </footer>
 </main>

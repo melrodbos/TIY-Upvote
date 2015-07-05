@@ -20,16 +20,16 @@
   <!-- endbuild -->
 </head>
 
-    <body class="container">
+    <body class="container" ng-controller="MainController as app">
       <div class="container-fluid">
         <nav class="header">
           <ul class="nav nav-pills pull-right">
-            <li class="active">
+            <li><a href="#/questions" ng-click="app.login()" >Login</a></li>
               <li>
-                <button><a href="#/questions" class="btn btn-default btn-lg">Questions</a></button>
+              <a href="#/questions">Questions</a>
               </li>
               <li>
-                <button><a href="#/ask" class="btn btn-default btn-lg">Ask a Question</a></button>
+            <a href="#/ask">Ask a Question</a>
               </li>
           </ul>
           <h1 class="text-muted">
@@ -65,7 +65,10 @@
       <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
       <!-- endbuild -->
       <!-- build:js scripts/main.js -->
-      <script src="scripts/main.js"></script>
+      <script src="scripts/tiy-upvote/tiy-upvote.js"></script>
+      <script src="scripts/tiy-upvote/controllers/main_controller.js"></script>
+      <script src="scripts/tiy-upvote/controllers/list_controller.js"></script>
+      <script src="scripts/tiy-upvote/controllers/ask_question.js"></script>
       <!-- endbuild -->
     </body>
 

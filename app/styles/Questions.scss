@@ -1,16 +1,14 @@
 .tab-row {
-
   font-weight: 400;
-  border: .15ex solid #e0e0e0;
-  border-bottom-color: #fff;
-  border-top: .2ex solid #f90;
+  border-bottom: .15ex solid lightgray;
   display: block;
-  text-align: center;
+  text-align: right;
+  width: 100%;
   margin-top: .2ex;
   margin-bottom: 1ex;
   ul li {
     display: inline-block;
-    width: 18.2%;
+    width: 15%;
     min-width: 3em;
     padding: 0;
     line-height: 2em;
@@ -58,19 +56,31 @@ section {
   display: none;
   width: 100%;
 }
-
-.singlepanel {
-  display: block;
-  width: 90%;
-  margin: auto;
-  text-align: center;
-}
-
-.singlepanel > p {
-  font-size: 2ex;
-  margin-bottom: 1ex;
-}
-
 .container .panels .content-current {
   display: block;
+}
+.row.questions {
+  width: 100%;
+  .counters {
+    width: 100%;
+    display: inline-block;
+  }
+}
+#questionTitle {
+  display:inline-block;
+  position: relative;
+  align: left;
+  width: 100%;
+}
+#Author {
+  align: right;
+  display: inline-block;
+}
+
+.footer {
+  float: left;
+  display: block;
+}
+.footer > ul {
+  display: inline-block;
 }
