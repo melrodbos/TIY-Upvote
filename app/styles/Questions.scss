@@ -59,11 +59,19 @@ section {
 .container .panels .content-current {
   display: block;
 }
-.row.questions {
+
+.questions {
   width: 100%;
+  margin: 0;
   .counters {
-    width: 100%;
+    width: 45%;
     display: inline-block;
+    .counters p {
+      width: 33%;
+    }
+  }
+  .question {
+    width: 55%;
   }
 }
 #questionTitle {
