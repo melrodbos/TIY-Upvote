@@ -16,11 +16,11 @@
       // controller: 'AnswerController',
       // controllerAs: 'answer'
     });
-    $routeProvider.when('/ask', {
-      templateUrl: '/views/ask.html'
+    // $routeProvider.when('/ask', {
+    //   templateUrl: '/views/ask.html'
       // controller: 'AskController',
       // controllerAs: 'ask'
-    });
+    // });
     $routeProvider.otherwise('/questions');
   });
 
