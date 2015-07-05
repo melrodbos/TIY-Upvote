@@ -1,4 +1,12 @@
-<main class="container">
+<body class="container">
+  <!-- input your question field -->
+    <ul ng-repeat="question in ask.questions">
+    <bloquote>
+      <h3>{{question.title}}</h3>
+      {{question.info}}
+      {{question.tags}}
+    </bloquote>
+    </ul>
   <!--  Review Form -->
   <form name="askForm" ng-controller="AskController as ask" ng-submit="askForm.$valid && ask.addAsk(list)" novalidate>
     <!-- input your question field -->
@@ -27,4 +35,4 @@
     <input type="submit" ng-click="update(user)" class="btn btn-primary pull-left" value="Post Your Question" onclick="getFields();"/>
       <input type="submit" ng-click="reset()" class="btn btn-primary pull-left" value="Boom!" />
   </form>
-</main>
+</body>
