@@ -8,7 +8,7 @@ angular.module('tiy-upvote')
   var list = this;
   list.questions = [];
 
-  $http.get('/api/questions.json')
+  $http.get('/api/list/questions.json')
     .then(function(response) {
       console.log(response);
       list.questions = response.data;
