@@ -1,7 +1,10 @@
-
+/* global angular */
+(function(){
 'use strict';
+
+var app = angular.module('tiy-upvote', ['ng-route', 'restangular']);
 //Ask a question controller...
-app.cotroller("AskController", function($scope){
+app.cotroller("AskController", function(){
   //substitute "product" for "question"
   this.question = {};
 // Push review onto this "ask" questions "array"...
@@ -11,20 +14,20 @@ app.cotroller("AskController", function($scope){
   };
 
 });
-
+});
 
 // app.controller("AskController", function($scope) {
 //   $scope.post = {title: '', question: ''};
 //
 // });
 //Start of Route...
-.config(function($routeProvider){
-  $routeProvider
-    .when('/', {
-      templateUrl: 'views/ask.html',
-      controller: 'AskController'
-    })
-});//End of Route...
+// app.config(function($routeProvider){
+//   $routeProvider
+//     .when('/', {
+//       templateUrl: 'views/ask.html',
+//       controller: 'AskController'
+//     })
+// });//End of Route...
 
 
 
