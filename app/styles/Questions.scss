@@ -52,20 +52,6 @@
   }
 }
 
-section {
-  display: none;
-  width: 100%;
-}
-.container .panels .content-current {
-  display: block;
-}
-.row.questions {
-  width: 100%;
-  .counters {
-    width: 100%;
-    display: inline-block;
-  }
-}
 #questionTitle {
   display:inline-block;
   position: relative;
@@ -78,9 +64,21 @@ section {
 }
 
 .footer {
-  float: left;
   display: block;
+  width: 100%;
+  background-color: darkgrey;
+  color: white;
+  padding: 1.2em 0 1.2em 0;
+  text-align: center;
 }
-.footer > ul {
+.footer ul {
   display: inline-block;
+  list-style: none;
+}
+.footer li {
+  padding: .2em 0 .2em 0;
+}
+.footer a {
+  font-size: 1.5em;
+  font-weight: bold;
 }
